@@ -112,10 +112,10 @@ export default function TopMid() {
     HTML<img id='img-skills' src="html.svg" alt='html' />
 </button>
 <button class="Skills-btn">
-    CSS <img id='img-skills' src="css.svg" alt='css' />
+    CSS <img id='img-skills' src="styles.svg" alt='css' />
 </button>
 <button class="Skills-btn">
-    JavaScript <img id='img-skills' src="js.svg" alt='js' />
+    JavaScript <img id='img-skills' src="script.svg" alt='js' />
 </button>
 <button class="Skills-btn">
     Tailwind <img id='img-skills' src="Tcss.svg" alt='tailwind' />

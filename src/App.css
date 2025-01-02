@@ -1,0 +1,149 @@
+body{
+  background-color: #121212;
+  color: rgb(249, 240, 225);
+  margin: 0%;
+  font-family: 'Poppins', sans-serif;
+ width: 100vw;
+ height: 100vh;
+ overflow-x: hidden;
+}
+
+
+
+#Navbar{
+  width: 100vw;
+  font-weight:220;
+  position: fixed;
+  background-color:#121212;
+  z-index: 100;
+}
+
+
+
+#Navbar-Links a {
+  color: rgb(249, 240, 225);
+  text-decoration: none;
+
+
+}
+#Navbar-Links a:hover {
+  color: rgb(209, 213, 219); /* This is approximately the gray-300 color in Tailwind */
+
+}
+
+#Heading-Space{
+padding-left: 20px;
+padding-right: 20px;
+align-items: center;
+display: flex;
+height: 100px;
+}
+
+#Heading{
+  font-size:32px;
+  animation: fadeIn 1s ease-in;
+  opacity: 1;
+}
+
+
+
+
+#Gmail{
+  display: none;
+}
+
+
+
+#Navbar-Links{
+
+  display: none;
+  font-size: 14px;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+left: 5%;
+}
+
+
+@media screen and (min-width: 750px) {
+  #Heading {
+    font-size: 21px;
+  }
+
+  #Heading-Space{
+     padding-left: 10%;
+     padding-right: 10%;
+     justify-content: space-between;
+  }
+
+  #image-Space{
+   display: none;
+  }
+
+  #Gmail{
+    display:flex;
+    font-size: 14px;
+  }
+  #Navbar-Links{
+    display:flex;
+  }
+  
+  #Top-Heading{
+   margin-left: 10%;
+   font-size: 27px;
+  }
+
+  #Top-Heading-Name{
+    margin-left: 10%;
+   
+  }
+
+}
+
+
+
+
+
+
+@media screen and (min-width: 1080px) {
+
+  #Top-Heading{
+    margin-left:68px;
+   
+   }
+ 
+
+   #Top-Heading-Name{
+    margin-left:68px;
+    width: 70%;
+    font-size: 18px;
+   }
+
+
+
+}
+
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
+
+
+#image-Space{
+  margin-left:auto;
+}
+
+#image-nav{
+  width:20px;
+  height:20px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+

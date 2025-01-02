@@ -8,7 +8,7 @@ export default function Navbar() {
             <p id="Heading">Yash.</p>
             <div id="image-Space">
                 <a href="/"><img id="image-nav" src="Github.svg" alt="Github"/></a>
-                <a href="/"><img id="image-nav" src="linkedin.svg" alt="LinkedIn"/></a>
+                <a href="/"><img id="image-nav" src="linkdin.svg" alt="LinkedIn"/></a>
                 <a href="/"><img id="image-nav" src="Mail.svg" alt="Email"/></a>     
                 <a href="/"><img id="image-nav" src="Page.svg" alt="Resume"/></a>    
             </div>

@@ -12,7 +12,7 @@ export default function Top() {
 
 
   useEffect(() =>
-     {  setTimeout(() => { setIsVisible(true); }, 0);
+     {  setTimeout(() => { setIsVisible(true); }, 2000);
  }, []);
 
 

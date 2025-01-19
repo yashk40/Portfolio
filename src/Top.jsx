@@ -2,12 +2,22 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './Top.css'
-
+import { useState } from 'react'
 export default function Top() {
   const headingRef = useRef(null);
   const nameRef = useRef(null);
   const containerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+   
 
+
+  useEffect(() =>
+     {  setTimeout(() => { setIsVisible(true); }, 0);
+ }, []);
+
+
+
+  
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     
@@ -51,11 +61,15 @@ export default function Top() {
 
   return (
     <>
-      <div id='Top'>
+    <div  className={`my-element ${isVisible ? 'visible' : 'hidden'}`}>
+
+   
+      <div id='Top' >
         <div id='Top-Heading-Container' ref={containerRef}>
           <h2 ref={headingRef} id='Top-Heading'>Hey,</h2>
           <div ref={nameRef} id='Top-Heading-Name'>I'm Yash, a student with a vision, building the foundations of my dreams</div>
         </div>
+      </div>
       </div>
     </>
   )

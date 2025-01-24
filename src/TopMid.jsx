@@ -144,9 +144,14 @@ export default function TopMid() {
        
        </div>
           <div className='project'>
+            <a id='link-project' href='https://newzzbook.netlify.app/'>
+
             <p className='Project-title'>
-              NewsBook
+              NewsBook 
             </p>
+
+            </a>
+           
             <img 
               src="news.png" 
               alt='newsbook'
@@ -158,7 +163,6 @@ export default function TopMid() {
               }} 
             />
 <p>
-  Descreption
 </p>
           </div>
        </div>

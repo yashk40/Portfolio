@@ -136,6 +136,7 @@
   .projects-whole-cont{
     display: none;
   }
+
 }
 
 
@@ -278,4 +279,11 @@ text-decoration: none;
 
 a{
   text-decoration: none;
+}
+
+
+.descreption-project{
+  width: 90%;
+  text-align: center;
+  
 }

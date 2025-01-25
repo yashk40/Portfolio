@@ -1,0 +1,31 @@
+.Skills-pc{
+    width: 100vw;
+    height: 90vh;
+    display:none
+    
+
+}
+
+.skils-pt1{
+  width: 50%;
+  height: 100%;
+
+}
+.skils-pt2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    font-size: 30px;
+  }
+
+
+
+
+  @media screen and (min-width: 1024px) {
+
+    .Skills-pc{
+      display: flex;
+    }
+  }

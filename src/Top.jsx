@@ -21,7 +21,7 @@ export default function Top() {
    
       <div id='Top' >
         <div id='Top-Heading-Container'>
-          <h2  id='Top-Heading'>Hey,check</h2>
+          <h2  id='Top-Heading'>Hey,</h2>
           <div  id='Top-Heading-Name'>I'm Yash, a student with a vision, building the foundations of my dreams</div>
         </div>
       </div>

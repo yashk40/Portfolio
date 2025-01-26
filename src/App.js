@@ -1,6 +1,5 @@
 import './App.css';
 import Navbar from './Navbar';
-import Skillpc from './Skillpc';
 
 import Top from './Top';
 import Topbtm from './Topbtm';

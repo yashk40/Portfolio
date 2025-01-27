@@ -10,6 +10,7 @@ export default function TopMid() {
   const textRef2 = useRef(null)
   const skillsRef = useRef(null)
   const skillsRef2 = useRef(null)
+  const PCskillsRef= useRef(null)
   useEffect(() => {
     gsap.fromTo(textRef1.current,
       {
@@ -83,6 +84,23 @@ export default function TopMid() {
     )
 
 
+    gsap.fromTo(PCskillsRef.current,
+      {
+        opacity: 0,
+        y: 90
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: textRef2.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+          markers: false
+        }
+      }
+    )
 
 
   }, [])
@@ -137,9 +155,9 @@ export default function TopMid() {
           </button>
         </div>
       </div>
-      <div className='Skills-pc' ref={skillsRef}>
+      <div className='Skills-pc' ref={PCskillsRef}>
          <div className='skils-pt1'>
-
+              Projects
          </div>
          <div className='skils-pt2'>
                 Skills

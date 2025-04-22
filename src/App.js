@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './Navbar';
 import ProjectsSection from './projects-section';
 import SkillsSection from './SkillSection';
-
+import Footer from './footer';
 
 import Top from './Top';
 
@@ -38,6 +38,7 @@ function App() {
       <TopMid />
        <SkillsSection/>
        <ProjectsSection/>
+       <Footer/>
     </>
   );
 }

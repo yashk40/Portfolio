@@ -28,29 +28,27 @@ export default function ProjectsSection() {
 
   const isMobile = windowWidth < 768
   const isTablet = windowWidth >= 768 && windowWidth < 1024
-
   const allProjects = [
     {
       title: "News Website",
       description:
-        "A News website built with React.js and Tailwind CSS to showcase News of all over the world and also you can change the language of news and country also",
+        "A News website built with React.js and Tailwind CSS to showcase news from around the world. Users can switch between languages and countries to customize their news feed.",
       technologies: ["React.js", "Bootstrap", "Tailwind CSS"],
       githubUrl: "https://github.com/yashk40/News-book",
       liveUrl: "https://newzzbook.netlify.app/",
-      image:
-        "./nzbk.png",
+      image: "./nzbk.png",
       color: "#6366F1",
     },
     {
       title: "Crypto-tracker",
       description:
-        "A real-time cryptocurrency price tracker built using Next.js, Tailwind CSS, and ShadCN UI.Integrated with CoinGecko API for fetching live market data.Features include search, dark/light mode toggle, favorite coins, and detailed crypto view",
+        "A real-time cryptocurrency price tracker using Next.js, Tailwind CSS, and ShadCN UI. Integrated with CoinGecko API for live market data with dark/light mode and favorites.",
       technologies: [
         "Next.js 14 (App Router)",
         "Tailwind CSS + ShadCN UI",
         "TypeScript",
         "CoinGecko Public API",
-        "Dark/Light Theme using next-themes",
+        "next-themes",
       ],
       githubUrl: "https://github.com/yashk40/Crypto-tracker",
       liveUrl: "https://crypto-tracker-lemon-five.vercel.app/",
@@ -60,70 +58,40 @@ export default function ProjectsSection() {
     {
       title: "Mood-Book",
       description:
-        "A dynamic web application that recommends books based on the user's current mood. Built with Next.js, React, and Tailwind CSS, the app integrates AI (via Groq LLM) to generate personalized book suggestions in real-time. It features smooth animations using Framer Motion, mood-specific theming, and a clean, responsive UI.",
-      technologies: ["Next.js", "Groq AI", "Tailwind CSS + ShadCN UI",
-        "TypeScript",],
+        "An AI-powered app recommending books based on your mood. Built using Groq LLM with smooth animations, mood-based UI themes, and real-time suggestions.",
+      technologies: ["Next.js", "Groq AI", "Tailwind CSS + ShadCN UI", "TypeScript"],
       githubUrl: "https://github.com/yashk40/Mood-Book",
-      liveUrl:"https://mood-book34.vercel.app/",
+      liveUrl: "https://mood-book34.vercel.app/",
       image: "./mdbk.png",
       color: "#F59E0B",
     },
     {
-      title: "Portfolio Website",
-      description: "A personal portfolio website showcasing projects, skills, and contact information.",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "https://github.com/yourusername/portfolio",
-      liveUrl: "https://yourportfolio.com",
-      image: "/placeholder.svg?height=300&width=500",
+      title: "Chintamani Decor",
+      description:
+        "An interior designing website with an admin panel developed as a freelance project at Interact AI. Features client-side management, smooth UI, and image uploads.",
+      technologies: [
+        "React",
+        "ShadCN",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Firebase",
+        "Cloudinary",
+      ],
+      liveUrl: "https://www.chintamanidecor.in/",
+      image: "./dec.png",
+      color: "#EF4444",
+    },
+    {
+      title: "HK-Techinal website",
+      description:
+        "A landing page created for HK Technical. Clean, responsive design with animations to highlight services and training programs.",
+      technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "AOS"],
+      liveUrl: "http://hkcheckweb.netlify.app/",
+      image: "./hk.png",
       color: "#3B82F6",
     },
-    {
-      title: "Weather App",
-      description: "A weather application that displays current weather conditions and forecasts for any location.",
-      technologies: ["React", "OpenWeather API", "Geolocation API"],
-      githubUrl: "https://github.com/yourusername/weatherapp",
-      liveUrl: "https://yourweatherapp.com",
-      image: "/placeholder.svg?height=300&width=500",
-      color: "#EC4899",
-    },
-    {
-      title: "Recipe Finder",
-      description: "An application that helps users find recipes based on ingredients they have available.",
-      technologies: ["React", "Edamam API", "Firebase"],
-      githubUrl: "https://github.com/yourusername/recipefinder",
-      liveUrl: "https://yourrecipefinder.com",
-      image: "/placeholder.svg?height=300&width=500",
-      color: "#8B5CF6",
-    },
-    {
-      title: "Fitness Tracker",
-      description: "A mobile-first application for tracking workouts and fitness progress.",
-      technologies: ["React Native", "Firebase", "Redux"],
-      githubUrl: "https://github.com/yourusername/fitness-tracker",
-      liveUrl: "https://yourfitnesstracker.com",
-      image: "/placeholder.svg?height=300&width=500",
-      color: "#F97316",
-    },
-    {
-      title: "Chat Application",
-      description: "A real-time chat application with multiple rooms and user authentication.",
-      technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-      githubUrl: "https://github.com/yourusername/chatapp",
-      liveUrl: "https://yourchatapp.com",
-      image: "/placeholder.svg?height=300&width=500",
-      color: "#06B6D4",
-    },
-    {
-      title: "Blog Platform",
-      description: "A content management system for creating and managing blog posts.",
-      technologies: ["Next.js", "Sanity.io", "Tailwind CSS"],
-      githubUrl: "https://github.com/yourusername/blogplatform",
-      liveUrl: "https://yourblogplatform.com",
-      image: "/placeholder.svg?height=300&width=500",
-      color: "#84CC16",
-    },
   ]
-
+  
   // Only show the number of projects based on visibleProjects state
   const projects = allProjects.slice(0, visibleProjects)
 

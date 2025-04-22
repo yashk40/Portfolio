@@ -38,7 +38,7 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/yashk40/News-book",
       liveUrl: "https://newzzbook.netlify.app/",
       image:
-        "https://firebasestorage.googleapis.com/v0/b/e-commerce-749a1.appspot.com/o/Screenshot%202025-04-02%20141438.png?alt=media&token=13d547ee-dae3-4f8d-a513-8c1728788091?height=400&width=500",
+        "./nzbk.png",
       color: "#6366F1",
     },
     {
@@ -65,7 +65,7 @@ export default function ProjectsSection() {
         "TypeScript",],
       githubUrl: "https://github.com/yashk40/Mood-Book",
       liveUrl:"https://mood-book34.vercel.app/",
-      image: "./Moodbook.png",
+      image: "./mdbk.png",
       color: "#F59E0B",
     },
     {

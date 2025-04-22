@@ -1,8 +1,11 @@
 import './App.css';
 import Navbar from './Navbar';
+import ProjectsSection from './projects-section';
+import SkillsSection from './SkillSection';
+
 
 import Top from './Top';
-import Topbtm from './Topbtm';
+
 import TopMid from './TopMid';
 import Lenis from '@studio-freight/lenis'
 import { useEffect } from 'react'
@@ -33,6 +36,8 @@ function App() {
       <Navbar />
       <Top />
       <TopMid />
+       <SkillsSection/>
+       <ProjectsSection/>
     </>
   );
 }

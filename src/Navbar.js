@@ -1,5 +1,6 @@
+"use client"
 import React from 'react'
-
+import "./App.css"
 export default function Navbar() {
   return (
     <div>
@@ -12,7 +13,7 @@ export default function Navbar() {
                 <a href="ykumawat006@gmail.com"><img id="image-nav" src="Mail.svg" alt="Email"/></a>     
                 <a href="/"><img id="image-nav" src="Page.svg" alt="Resume"/></a>    
             </div>
-            <div id='Navbar-Links'>
+            <div id='Navbar-Links-2'>
                 <a href='https://github.com/yashk40' id='github'>Github</a>
                 <a href='https://www.linkedin.com/in/yash-kum-658a252aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' id='linkedin'>Linkedin</a>
                 <a href='/' id='Resume'>Resume</a>

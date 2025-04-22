@@ -6,6 +6,8 @@ body{
  width: 100vw;
  height: 100vh;
  overflow-x: hidden;
+ overflow-y: auto;
+ height: auto;
 }
 
 
@@ -20,13 +22,13 @@ body{
 
 
 
-#Navbar-Links a {
+#Navbar-Links-2 a {
   color: rgb(249, 240, 225);
   text-decoration: none;
 
 
 }
-#Navbar-Links a:hover {
+#Navbar-Links-2 a:hover {
   color: rgb(209, 213, 219); /* This is approximately the gray-300 color in Tailwind */
 
 }
@@ -54,7 +56,7 @@ height: 100px;
 
 
 
-#Navbar-Links{
+#Navbar-Links-2{
 
   display: none;
   font-size: 14px;
@@ -85,7 +87,7 @@ left: 5%;
     display:flex;
     font-size: 14px;
   }
-  #Navbar-Links{
+  #Navbar-Links-2{
     display:flex;
   }
   
@@ -147,3 +149,79 @@ left: 5%;
 }
 
 
+@media screen and (max-width:500px){
+  #Top-Heading{
+    font-size: 25px;
+   
+   }
+}
+
+
+
+.Exp-sec{
+  font-size: 24px;
+  padding-right: 100px;
+}
+
+.comp-name-pos{
+  display: flex;
+}
+
+.company-name{
+  color:wheat;
+}
+
+.company-date{
+  color:rgba(245, 222, 179, 0.781);
+  font-size: 16px;
+  font-weight: 200;
+}
+
+
+#exp-cont{
+  margin-left:  -200px;
+}
+
+@media screen and (max-width:768px) {
+  #exp-cont{
+    margin-left:0px;
+  }
+}
+
+.mid-desc{
+  width: 88%;
+}
+
+#exp-cont-phone{
+  display:none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  width: 75%;
+  font-size: 20px;
+
+}
+@media screen and (max-width:550px) {
+  #exp-cont{
+    display: none;
+  }
+  .mid-desc{
+    width: 100%;
+  }
+
+  #exp-cont-phone{
+    display:block;
+  }
+  
+}
+
+
+@media screen and (min-width: 770px) and (max-width: 1023px) {
+  #exp-cont {
+    display: none;
+  }
+  #exp-cont-phone{
+    display:block;
+  }
+}

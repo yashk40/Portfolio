@@ -1,7 +1,8 @@
+
 #Top-Heading{
     font-weight: 300;
     color: #F9F0E1;
-    padding-left: 20px;
+    padding-left:14px;
 }
 
 #Top {
@@ -10,7 +11,7 @@
   display: flex; /* Use flex to center the content */
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Initially hide the element */
+
   transition: opacity 1s ease-in-out; /* Smooth transition */
 }
 
@@ -24,7 +25,7 @@
         font-size: 30px;
         font-weight: 300;
         color: #F9F0E1;
-        padding-left: 20px;
+        padding-left: 40px;
         width: 80%;
     }
 
@@ -52,6 +53,7 @@
    }
   
    #Top-Heading-Container{
+
     width: 80%;
     justify-content: center;
     align-items: center;
@@ -96,7 +98,7 @@
   color: #F9F0E1;
   text-decoration: none;
   /* Create gradient underline */
-  background-image: linear-gradient(to right, #F9F0E1, #F9F0E1);
+  background-image: #121212;
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 70% 1px;
@@ -230,7 +232,7 @@ Skills-btn-text{
 .Projects-cont{
   font-size: 30px;
   margin-top: 55px;
-  background-image: linear-gradient(to right, #F9F0E1, #F9F0E1);
+  background-image:#121212;
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 70% 1px;

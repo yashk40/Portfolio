@@ -77,7 +77,7 @@ export default function Footer() {
   className="footer-link"     
   rel="noopener noreferrer" 
 >
-  <img src="./page.svg" height={20} alt="PDF Icon" /> 
+  <img src="./Page.svg" height={20} alt="PDF Icon" /> 
   <span>Resume</span>
 </a>
 

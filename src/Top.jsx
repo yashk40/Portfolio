@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import './Top.css'
+
 import { useState } from 'react'
 import BlurText from './Heading'
 export default function Top() {

@@ -225,3 +225,552 @@ left: 5%;
     display:block;
   }
 }
+
+
+.Skills-pc{
+  width: 100vw;
+  height: 90vh;
+  display:none;
+  margin-top: 50px;
+
+}
+
+.skils-pt1{
+width: 50%;
+height: 100%;
+
+}
+.skils-pt2{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding:50px;
+
+  font-size: 30px;
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+
+  .Skills-pc{
+    display: flex;
+  }
+}
+
+
+.skills-section {
+  padding: 9rem 2rem;
+  background:  #121212;
+  color: #f5f5f5;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: radial-gradient(circle at 10% 20%, rgba(100, 43, 115, 0.1) 0%, rgba(4, 0, 4, 0) 90%); */
+  pointer-events: none;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-header {
+  margin-bottom: 5rem;
+  text-align: right;
+  position: relative;
+}
+
+.skills-title {
+  font-size: 5rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(to right,  wheat, #F9F0E1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.skills-subtitle {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.category-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #121212,#F9F0E1);
+  border-radius: 3px;
+}
+
+.skill-bars {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-bar-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-bar-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f9f0e122;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.skill-bar-container:hover .skill-icon {
+  transform: scale(1.1);
+  color: #F9F0E1;
+}
+
+.skill-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+  flex-grow: 1;
+}
+
+.skill-percentage {
+  font-weight: 600;
+  color: wheat;
+}
+
+.skill-bar-bg {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(to right, white, #F9F0E1);
+  border-radius: 4px;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .skills-section {
+    padding: 8rem 3rem;
+  }
+
+  .skills-content {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .skills-title {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 10024px) {
+  .skills-section {
+    padding: 10rem 4rem;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .skills-header {
+    position: sticky;
+    top: 4rem;
+    margin-bottom: 0;
+  }
+
+  .skills-title {
+    font-size: 7rem;
+  }
+
+  .skills-content {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-title {
+    font-size: 3.5rem;
+  }
+
+  .skills-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .skill-bars {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+#Top-Heading{
+  font-weight: 300;
+  color: #F9F0E1;
+  padding-left:14px;
+}
+
+#Top {
+height: 100vh;
+width: 100%;
+display: flex; /* Use flex to center the content */
+justify-content: center;
+align-items: center;
+
+transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
+/* When the element is visible */
+#Top.visible {
+opacity: 1; /* Make it visible */
+}
+
+
+  #Top-Heading-Name{
+      font-size: 30px;
+      font-weight: 300;
+      color: #F9F0E1;
+      padding-left: 40px;
+      width: 80%;
+  }
+
+  #Top-Heading-Name-2{
+      width: 50%;
+      font-size: 30px;
+      font-weight: 300;
+      color: #F9F0E1;
+      padding-left: 20px;
+      display: none;
+  }
+
+@media screen and (min-width: 1080px) {
+
+
+ #Top-Heading-Name-2{
+  display: block;
+ }
+
+ #Top{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ #Top-Heading-Container{
+
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+ }
+
+}
+
+
+@media screen and (min-width: 1080px) {
+
+  #Top-Heading{
+    margin-left:68px;
+    font-size: 28px;
+   }
+ 
+
+   #Top-Heading-Name{
+    margin-left:68px;
+    width: 70%;
+    font-size: 38px;
+   }
+
+
+
+}
+
+#Top-Heading-Container {
+perspective: 1000px;
+transform-style: preserve-3d;
+}
+
+#Top-Heading, #Top-Heading-Name {
+transform-style: preserve-3d;
+backface-visibility: hidden;
+}
+
+
+.Topbtm-start-text{
+font-size: 30px;
+margin-bottom: 30px;
+font-weight: 300;
+color: #F9F0E1;
+text-decoration: none;
+/* Create gradient underline */
+background-image: #121212;
+background-position: 0% 100%;
+background-repeat: no-repeat;
+background-size: 70% 1px;
+/* Add smooth transition for hover effects */
+transition: background-size 0.3s ease;
+}
+
+/* Optional: Hover effect that thickens the underline */
+
+.Top-Mid-Container-Text{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0 20px;
+margin: 0 auto;
+width: 75%;
+font-size: 20px;
+
+}
+
+@media screen and (min-width: 768px) {
+.Top-Mid-Container-Text {
+  font-size: 18px;
+}
+}
+
+@media screen and (min-width: 1024px) {
+.Top-Mid-Container-Text {
+  font-size: 28px;
+  width: 45%;
+margin: 0%;
+margin-left:12%;
+}
+.Topbtm-start{
+  display: none;
+}
+.projects-whole-cont{
+  display: none;
+}
+
+}
+
+
+
+
+
+
+.Topbtm-start{
+font-weight: 400;
+font-size: 20px;
+margin-left: 12.9%;
+margin-top: 80px;
+
+text-shadow: 
+  2px 2px 4px rgba(0, 0, 0, 0.8),
+  0 0 20px rgba(0, 0, 0, 0.6),
+  0 0 30px rgba(0, 0, 0, 0.4);
+color:wheat;
+
+height: auto;
+}
+
+
+
+@media screen and (min-width: 768px) {
+.Topbtm-start-text {
+font-size: 30px;
+ 
+}
+}
+
+
+Skills-btn-text{
+
+font-size: 18px;
+
+}
+
+
+.Skills-btn{
+width: auto;
+min-width: 10px;
+height: 40px;
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+/* background-color: rgb(44, 44, 44); */
+background-color:#121212;
+cursor: pointer;
+transition-duration: .3s;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+border: 1px solid #F9F0E1;
+color: #F9F0E1;
+font-size: 15px;
+padding: 10px 30px;
+margin-left: 10px;
+margin-bottom: 10px;
+}
+
+
+
+.Skills-btn:hover {
+background-color: rgb(56, 56, 56);
+}
+
+
+
+
+.Skills-btn:active {
+transform: scale(0.8);
+}
+
+.Skills-btn-text{
+
+margin-left: 10px;
+}
+
+#img-skills{
+width: 20px;
+height: 20px;
+margin-left: 5px;
+}
+
+.Skills-container{
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.Projects-cont{
+font-size: 30px;
+margin-top: 55px;
+background-image:#121212;
+background-position: 0% 100%;
+background-repeat: no-repeat;
+background-size: 70% 1px;
+text-decoration: none;
+/* Add smooth transition for hover ef
+fects */
+transition: background-size 0.3s ease;
+font-weight: 300;
+}
+
+
+.projects-whole-cont{
+  margin-left: 12%;
+}
+
+.Project-title{
+font-size:20px; 
+text-decoration: none;
+color: #F9F0E1;
+}
+
+@media screen and (min-width: 768px) {
+.Project-title {
+  font-size:24px; /* Medium screens */
+
+text-decoration: none;
+}
+}
+
+@media screen and (min-width: 1024px) {
+.Project-title {
+  font-size: 28px; /* Larger screens */
+
+text-decoration: none;
+}
+}
+
+
+.responsive-image {
+max-width: 100%;
+height:140px;
+display: block;
+object-fit: cover;
+}
+
+
+a{
+text-decoration: none;
+}
+
+
+.descreption-project{
+width: 90%;
+text-align: center;
+
+}
+
+

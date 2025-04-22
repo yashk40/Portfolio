@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
-import './Top.css'
+
 import './App.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import "./Skills.css"
+
 gsap.registerPlugin(ScrollTrigger)
 
 export default function TopMid() {

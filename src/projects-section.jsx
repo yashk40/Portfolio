@@ -66,22 +66,6 @@ export default function ProjectsSection() {
       color: "#F59E0B",
     },
     {
-      title: "Chintamani Decor",
-      description:
-        "An interior designing website with an admin panel developed as a freelance project at Interact AI. Features client-side management, smooth UI, and image uploads.",
-      technologies: [
-        "React",
-        "ShadCN",
-        "Tailwind CSS",
-        "Framer Motion",
-        "Firebase",
-        "Cloudinary",
-      ],
-      liveUrl: "https://www.chintamanidecor.in/",
-      image: "./dec.png",
-      color: "#EF4444",
-    },
-    {
       title: "HK-Techinal website",
       description:
         "A landing page created for HK Technical. Clean, responsive design with animations to highlight services and training programs.",

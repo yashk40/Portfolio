@@ -40,6 +40,17 @@ export default function ProjectsSection() {
       color: "#6366F1",
     },
     {
+      title: "Chintamani Decor",
+      description:
+        "An interior design website built for Interact AI using React and Tailwind CSS. It features a sleek admin panel, responsive design, animations, and Cloudinary integration for media management.",
+      technologies: ["React", "Tailwind CSS", "Firebase", "Cloudinary", "Framer Motion", "ShadCN"],
+      githubUrl: "", // Leave empty or add if public
+      liveUrl: "https://www.chintamanidecor.in/",
+      image: "./dec.png", // Adjust filename as needed
+      color: "#A855F7",
+    },
+    
+    {
       title: "Crypto-tracker",
       description:
         "A real-time cryptocurrency price tracker using Next.js, Tailwind CSS, and ShadCN UI. Integrated with CoinGecko API for live market data with dark/light mode and favorites.",

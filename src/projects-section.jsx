@@ -81,7 +81,7 @@ export default function ProjectsSection() {
       description:
         "A landing page created for HK Technical. Clean, responsive design with animations to highlight services and training programs.",
       technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "AOS"],
-      liveUrl: "http://hkcheckweb.netlify.app/",
+      liveUrl: "https://red334.netlify.app/",
       image: "./hk.png",
       color: "#3B82F6",
     },

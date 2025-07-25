@@ -346,24 +346,7 @@ export default function ProjectsSection() {
   return (
     <section style={sectionStyle} ref={containerRef}>
       {/* Animated background elements */}
-      <div>
-        {allProjects.map((project, index) => (
-          <motion.div
-            key={`bg-${index}`}
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: `radial-gradient(circle at 50% 50%, ${project.color}15 0%, transparent 50%)`,
-              backdropFilter: "blur(100px)",
-            }}
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 0.2,
-            }}
-            transition={{ duration: 0.8 }}
-          />
-        ))}
-      </div>
+
 
       <motion.div style={{ ...containerStyle, opacity, y }}>
         <div style={headerContainerStyle}>

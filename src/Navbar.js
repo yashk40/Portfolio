@@ -4,7 +4,7 @@ import "./App.css"
 export default function Navbar() {
   return (
     <div>
-          <div id="Navbar" style={{backgroundColor:"transparent"}}>
+          <div id="Navbar">
         <div id="Heading-Space">
             <p id="Heading">Yash.</p>
             <div id="image-Space">

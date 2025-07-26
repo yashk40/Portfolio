@@ -18,7 +18,6 @@ const BlurText = ({
   const [inView, setInView] = useState(false);
   const ref = useRef();
   const animatedCount = useRef(0);
-  const hasCompleted = useRef(false);
 
   const defaultFrom =
     direction === 'top'
@@ -50,33 +49,20 @@ const BlurText = ({
     return () => observer.disconnect();
   }, [threshold, rootMargin]);
 
-  // Reset animation state when inView changes
-  useEffect(() => {
-    if (!inView) {
-      animatedCount.current = 0;
-      hasCompleted.current = false;
-    }
-  }, [inView, elements.length]);
-
   const springs = useSprings(
     elements.length,
     elements.map((_, i) => ({
       from: animationFrom || defaultFrom,
       to: inView
         ? async (next) => {
-            for (const step of (animationTo || defaultTo)) {
-              await next(step);
-            }
-            animatedCount.current += 1;
-            if (
-              animatedCount.current === elements.length &&
-              onAnimationComplete &&
-              !hasCompleted.current
-            ) {
-              hasCompleted.current = true;
-              onAnimationComplete();
-            }
+          for (const step of (animationTo || defaultTo)) {
+            await next(step);
           }
+          animatedCount.current += 1;
+          if (animatedCount.current === elements.length && onAnimationComplete) {
+            onAnimationComplete();
+          }
+        }
         : animationFrom || defaultFrom,
       delay: i * delay,
       config: { easing },

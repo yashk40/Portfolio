@@ -3,12 +3,12 @@ import Navbar from './Navbar';
 import ProjectsSection from './projects-section';
 import SkillsSection from './SkillSection';
 import Footer from './footer';
-
+import ClickSpark from './Clickspark';
 import Top from './Top';
-
 import TopMid from './TopMid';
 import Lenis from '@studio-freight/lenis'
 import { useEffect } from 'react'
+
 
 function App() {
   useEffect(() => {
@@ -33,12 +33,22 @@ function App() {
 
   return (
     <>
+    <ClickSpark
+  sparkColor='#F9F0E1'
+  sparkSize={10}
+  sparkRadius={15}
+  sparkCount={8}
+  duration={400}
+>
+  
       <Navbar />
       <Top />
       <TopMid />
        <SkillsSection/>
        <ProjectsSection/>
        <Footer/>
+       
+</ClickSpark>
     </>
   );
 }

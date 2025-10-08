@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { ExternalLink, Github, Loader2 } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
-
+import Magnet from "./Magnetbtn"
 export default function ProjectsSection() {
   const [windowWidth, setWindowWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 0)
   const [imagesLoaded, setImagesLoaded] = useState({})
@@ -30,13 +30,14 @@ export default function ProjectsSection() {
   const isTablet = windowWidth >= 768 && windowWidth < 1024
   const allProjects = [
     {
-      title: "News Website",
+      title: "Earthlytics",
       description:
-        "A News website built with React.js and Tailwind CSS to showcase news from around the world. Users can switch between languages and countries to customize their news feed.",
-      technologies: ["React.js", "Bootstrap", "Tailwind CSS"],
-      githubUrl: "https://github.com/yashk40/News-book",
-      liveUrl: "https://newzzbook.netlify.app/",
-      image: "./nzbk.png",
+      
+        "Earthlytics is a real-time climate intelligence dashboard that turns complex environmental data into clear, actionable insights. Track key indicators, estimate product footprints, and discover practical ways to reduce your impact.",
+      technologies: ["HTML", "Javascript", "Tailwind CSS", "AI API"],
+      githubUrl: "https://github.com/yashk40/Earthlytics",
+      liveUrl: "https://climate4.netlify.app/",
+      image: "https://i.ibb.co/cKm12X7R/Screenshot-2025-09-24-155608.png",
       color: "#6366F1",
     },
     {
@@ -47,24 +48,23 @@ export default function ProjectsSection() {
       githubUrl: "", // Leave empty or add if public
       liveUrl: "https://www.chintamanidecor.in/",
       image: "./dec.png", // Adjust filename as needed
-      color: "#A855F7",
+      color: "#2a777c",
     },
     
     {
-      title: "Crypto-tracker",
+      title: "Easytoolhub",
       description:
-        "A real-time cryptocurrency price tracker using Next.js, Tailwind CSS, and ShadCN UI. Integrated with CoinGecko API for live market data with dark/light mode and favorites.",
+        "EasyToolHub is a web platform that provides a collection of practical online tools designed to simplify everyday digital tasks. From file converters and link generators to AI-powered utilities, the platform focuses on improving productivity for users in a clean and intuitive interface.",
       technologies: [
         "Next.js 14 (App Router)",
         "Tailwind CSS + ShadCN UI",
         "TypeScript",
-        "CoinGecko Public API",
-        "next-themes",
+        "AI API's"
       ],
       githubUrl: "https://github.com/yashk40/Crypto-tracker",
-      liveUrl: "https://crypto-tracker-lemon-five.vercel.app/",
-      image: "./Crypto2.png",
-      color: "#10B981",
+      liveUrl: "https://easytoolhub.xyz/",
+      image: "https://i.ibb.co/Jg1zmw1/Screenshot-2025-10-06-011205.png",
+      color: "#A855F7",
     },
     {
       title: "Mood-Book",
@@ -285,7 +285,8 @@ export default function ProjectsSection() {
   const buttonsContainerStyle = {
     display: "flex",
     gap: "1rem",
-    flexWrap: isMobile ? "wrap" : "nowrap",
+    flexDirection: isMobile ? "column" : "row",
+    flexWrap: isMobile ? "nowrap" : "nowrap",
   }
 
   const githubButtonStyle = {
@@ -302,8 +303,8 @@ export default function ProjectsSection() {
     cursor: "pointer",
     border: "none",
     boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-    width: isMobile ? "100%" : "auto",
-    justifyContent: isMobile ? "center" : "flex-start",
+    width: isMobile ? "90%" : "auto",
+    justifyContent: "center",
     textDecoration: "none",
   }
 
@@ -320,8 +321,8 @@ export default function ProjectsSection() {
     cursor: "pointer",
     border: "none",
     boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-    width: isMobile ? "100%" : "auto",
-    justifyContent: isMobile ? "center" : "flex-start",
+    width: isMobile ? "90%" : "auto",
+    justifyContent: "center",
     textDecoration: "none",
     backgroundColor: color,
   })
@@ -341,12 +342,13 @@ export default function ProjectsSection() {
     cursor: "pointer",
     margin: "3rem auto 0",
     transition: "all 0.3s ease",
+    width: "fit-content",
+    minWidth: "200px",
   }
 
   return (
     <section style={sectionStyle} ref={containerRef}>
       {/* Animated background elements */}
-
 
       <motion.div style={{ ...containerStyle, opacity, y }}>
         <div style={headerContainerStyle}>
@@ -446,30 +448,34 @@ export default function ProjectsSection() {
 
                 <div style={buttonsContainerStyle}>
                   {project.githubUrl && (
-                    <motion.a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={githubButtonStyle}
-                      whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Github size={16} />
-                      <span>View Code</span>
-                    </motion.a>
+                    <Magnet padding={20} disabled={false} magnetStrength={2}>
+                      <motion.a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={githubButtonStyle}
+                        whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Github size={16} />
+                        <span>View Code</span>
+                      </motion.a>
+                    </Magnet>
                   )}
                   {project.liveUrl && (
-                    <motion.a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={liveButtonStyle(project.color)}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <ExternalLink size={16} />
-                      <span>Live Demo</span>
-                    </motion.a>
+                    <Magnet padding={20} disabled={false} magnetStrength={2}>
+                      <motion.a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={liveButtonStyle(project.color)}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <ExternalLink size={16} />
+                        <span>Live Demo</span>
+                      </motion.a>
+                    </Magnet>
                   )}
                 </div>
               </div>
@@ -478,24 +484,29 @@ export default function ProjectsSection() {
         </div>
 
         {hasMoreProjects && (
-          <motion.button
-            style={discoverButtonStyle}
-            onClick={loadMoreProjects}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{
-              backgroundColor: "rgba(255, 255, 255, 0.2)",
-              borderColor: "rgba(245, 233, 209, 0.5)",
-            }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <span>Discover More</span>
-            <ExternalLink size={16} />
-          </motion.button>
+          <div style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+            <Magnet padding={30} disabled={false} magnetStrength={5}>
+              <motion.button
+                style={discoverButtonStyle}
+                onClick={loadMoreProjects}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{
+                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  borderColor: "rgba(245, 233, 209, 0.5)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <span>Discover More</span>
+                <ExternalLink size={16} />
+              </motion.button>
+            </Magnet>
+          </div>
         )}
       </motion.div>
+
     </section>
   )
 }

@@ -568,6 +568,14 @@ perspective: 1000px;
 transform-style: preserve-3d;
 }
 
+
+
+@media (min-width: 1220px) {
+  #Top-Heading-Container {
+   margin-left:-100px;
+  }
+}
+
 #Top-Heading, #Top-Heading-Name {
 transform-style: preserve-3d;
 backface-visibility: hidden;

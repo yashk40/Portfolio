@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { ExternalLink, Github, Loader2 } from "lucide-react"
+import { ExternalLink, Github, Loader2, Trophy } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Magnet from "./Magnetbtn"
 export default function ProjectsSection() {
@@ -29,10 +29,22 @@ export default function ProjectsSection() {
   const isMobile = windowWidth < 768
   const isTablet = windowWidth >= 768 && windowWidth < 1024
   const allProjects = [
+
+    {
+      title: "Neura CDN",
+      achievement: "OpenAI X NxtWave X AI Summit 2026 Hackathon Finalist",
+      description:
+        "A cutting-edge AI-native CDN platform. Generate production-ready UI components via AI, watch them compile in real-time, and deploy instantly to a global GitHub-backed CDN. Built for the future of rapid deployment.",
+      technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Real-time Compiler", "GitHub API"],
+      // githubUrl: "https://github.com/yashk40/NeuraCDN",
+      liveUrl: "https://www.neuracdn.tech/",
+      image: "https://imghosting.in/host/q9xc",
+      color: "#F59E0B",
+    },
     {
       title: "Earthlytics",
       description:
-      
+
         "Earthlytics is a real-time climate intelligence dashboard that turns complex environmental data into clear, actionable insights. Track key indicators, estimate product footprints, and discover practical ways to reduce your impact.",
       technologies: ["HTML", "Javascript", "Tailwind CSS", "AI API"],
       githubUrl: "https://github.com/yashk40/Earthlytics",
@@ -50,7 +62,7 @@ export default function ProjectsSection() {
       image: "./dec.png", // Adjust filename as needed
       color: "#2a777c",
     },
-    
+
     {
       title: "Easytoolhub",
       description:
@@ -86,7 +98,7 @@ export default function ProjectsSection() {
       color: "#3B82F6",
     },
   ]
-  
+
   // Only show the number of projects based on visibleProjects state
   const projects = allProjects.slice(0, visibleProjects)
 
@@ -252,8 +264,26 @@ export default function ProjectsSection() {
     fontWeight: "bold",
     marginBottom: isMobile ? "0.75rem" : "1rem",
     color: color,
-    textShadow: `0 2px 8px ${color}40`,
+    textShadow: `0 2px 12px ${color}30`,
     margin: 0,
+    letterSpacing: "-0.02em",
+  })
+
+  const achievementBadgeStyle = (color) => ({
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "0.5rem",
+    padding: "0.4rem 0.8rem",
+    borderRadius: "0.5rem",
+    fontSize: "0.75rem",
+    fontWeight: "600",
+    backgroundColor: `${color}10`,
+    color: color,
+    border: `1px solid ${color}30`,
+    marginBottom: "1rem",
+    boxShadow: `0 0 15px ${color}15`,
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
   })
 
   const projectDescriptionStyle = {
@@ -435,6 +465,17 @@ export default function ProjectsSection() {
                   gridArea: "content",
                 }}
               >
+                {project.achievement && (
+                  <motion.div
+                    style={achievementBadgeStyle(project.color)}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                  >
+                    <Trophy size={14} />
+                    <span>{project.achievement}</span>
+                  </motion.div>
+                )}
                 <h3 style={projectTitleStyle(project.color)}>{project.title}</h3>
                 <p style={projectDescriptionStyle}>{project.description}</p>
 

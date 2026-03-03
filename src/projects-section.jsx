@@ -272,24 +272,6 @@ export default function ProjectsSection() {
     letterSpacing: "-0.02em",
   })
 
-  const achievementBadgeStyle = (color) => ({
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "0.5rem",
-    padding: "0.4rem 0.8rem",
-    borderRadius: "0.5rem",
-    fontSize: "0.75rem",
-    fontWeight: "700",
-    backgroundColor: `${color}10`,
-    color: color,
-    border: `1px solid ${color}30`,
-    marginBottom: "1rem",
-    boxShadow: `0 0 15px ${color}15`,
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-    position: "relative",
-    overflow: "hidden",
-  })
 
   const projectDescriptionStyle = {
     marginBottom: isMobile ? "1rem" : "1.5rem",

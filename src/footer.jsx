@@ -43,7 +43,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="footer-link"
             >
-              <img src="Github.svg" height={20} />
+              <img src="Github.svg" alt="Github" height={20} />
               <span>Github</span>
             </a>
 
@@ -53,33 +53,33 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="footer-link"
             >
-              <img src="./linkdin.svg" height="20"/>
-              
-             <span>Linkedin</span>
+              <img src="./linkdin.svg" alt="Linkedin" height="20" />
+
+              <span>Linkedin</span>
             </a>
 
             <a
-  href="mailto:Ykumawat006@gmail.com"
-  className="footer-link"
-  title="Send email to Ykumawat006@gmail.com"
-  aria-label="Send email"
-  onClick={(e) => {
-    // Optional: You can track the click event here if needed
-    console.log('Email link clicked');
-    // The default behavior (opening mail client) will still occur
-  }}
->
-  <img src="./Mail.svg" height={20} alt="Email Icon" />
-  <span>Email</span>
-</a>
-<a
-  href="https://drive.google.com/file/d/1r8ZWLx9k1c7qAcbBAWDs_NRueqzaXhq-/view?usp=sharing"
-  className="footer-link"     
-  rel="noopener noreferrer" 
->
-  <img src="./Page.svg" height={20} alt="PDF Icon" /> 
-  <span>Resume</span>
-</a>
+              href="mailto:Ykumawat006@gmail.com"
+              className="footer-link"
+              title="Send email to Ykumawat006@gmail.com"
+              aria-label="Send email"
+              onClick={(e) => {
+                // Optional: You can track the click event here if needed
+                console.log('Email link clicked');
+                // The default behavior (opening mail client) will still occur
+              }}
+            >
+              <img src="./Mail.svg" height={20} alt="Email Icon" />
+              <span>Email</span>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1r8ZWLx9k1c7qAcbBAWDs_NRueqzaXhq-/view?usp=sharing"
+              className="footer-link"
+              rel="noopener noreferrer"
+            >
+              <img src="./Page.svg" height={20} alt="PDF Icon" />
+              <span>Resume</span>
+            </a>
 
             <button
               onClick={scrollToTop}

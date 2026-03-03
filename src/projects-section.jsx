@@ -56,30 +56,29 @@ export default function ProjectsSection() {
       certificateUrl: "https://imghosting.in/host/8fz2", // Add actual certificate link here
     },
     {
-      title: "Chintamani Decor",
+      title: "Warriors Sports Academy",
       description:
-        "An interior design website built for Interact AI using React and Tailwind CSS. It features a sleek admin panel, responsive design, animations, and Cloudinary integration for media management.",
-      technologies: ["React", "Tailwind CSS", "Firebase", "Cloudinary", "Framer Motion", "ShadCN"],
+        "An sports academy website built  as freelancer dev for Warriors Sports Academy using React and Tailwind CSS. It features a sleek admin panel, responsive design, animations, and integration for media management.",
+      technologies: ["React", "Tailwind CSS", "Firebase", "Framer Motion"],
       githubUrl: "", // Leave empty or add if public
-      liveUrl: "https://www.chintamanidecor.in/",
-      image: "./dec.png", // Adjust filename as needed
-      color: "#2a777c",
+      liveUrl: "https://www.warriorssportsacademy.com/",
+      image: "https://imghosting.in/host/78x2", // Adjust filename as needed
+      color: "#f08080",
     },
 
     {
-      title: "Easytoolhub",
+      title: "imghosting",
       description:
         "EasyToolHub is a web platform that provides a collection of practical online tools designed to simplify everyday digital tasks. From file converters and link generators to AI-powered utilities, the platform focuses on improving productivity for users in a clean and intuitive interface.",
       technologies: [
         "Next.js 14 (App Router)",
         "Tailwind CSS + ShadCN UI",
         "TypeScript",
-        "AI API's"
+        "Cloud based storage"
       ],
-      githubUrl: "https://github.com/yashk40/Crypto-tracker",
-      liveUrl: "https://easytoolhub.xyz/",
-      image: "https://i.ibb.co/Jg1zmw1/Screenshot-2025-10-06-011205.png",
-      color: "#A855F7",
+      liveUrl: "imghosting.in",
+      image: "https://imghosting.in/host/jr0o",
+      color: "#38BDF8",
     },
     {
       title: "Mood-Book",

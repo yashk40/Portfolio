@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowUp , Linkedin } from "lucide-react"
+import { ArrowUp } from "lucide-react"
 import { useEffect, useState } from "react"
 
 import "./App.css"

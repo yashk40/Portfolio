@@ -2,12 +2,12 @@
 
 import { useEffect } from "react"
 import { motion, useAnimation } from "framer-motion"
-import { FaCube } from "react-icons/fa";
+// import { FaCube } from "react-icons/fa";
 import { useInView } from "react-intersection-observer"
 import {
   SiReact,
   SiJavascript,
-  SiTypescript,
+//   SiTypescript,
   SiHtml5,
   SiCss3,
   SiTailwindcss,

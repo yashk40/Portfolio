@@ -8,8 +8,8 @@ gsap.registerPlugin(ScrollTrigger)
 export default function TopMid() {
   const textRef1 = useRef(null)
   const textRef2 = useRef(null)
-  const textRef3 = useRef(null)
-  const textRef4 = useRef(null)
+  // const textRef3 = useRef(null)
+  // const textRef4 = useRef(null)
   const phoneExpRef = useRef(null)
   const desktopExpRef = useRef(null)
   const phoneCertRef = useRef(null)
@@ -17,7 +17,7 @@ export default function TopMid() {
 
   useEffect(() => {
     // Create timeline for better control
-    const tl = gsap.timeline()
+    // const tl = gsap.timeline()
 
     // Clear any existing scroll triggers
     ScrollTrigger.getAll().forEach(trigger => trigger.kill())

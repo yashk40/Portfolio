@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { ExternalLink, Github, Loader2, Trophy } from "lucide-react"
+import { ExternalLink, Github, Loader2, Trophy, Award } from "lucide-react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Magnet from "./Magnetbtn"
 export default function ProjectsSection() {
@@ -40,9 +40,11 @@ export default function ProjectsSection() {
       liveUrl: "https://www.neuracdn.tech/",
       image: "https://imghosting.in/host/q9xc",
       color: "#F59E0B",
+      certificateUrl: "https://imghosting.in/host/n9jd", // Add actual certificate link here
     },
     {
       title: "Earthlytics",
+      achievement: "Syrotech Hackathon - Outstanding Project",
       description:
 
         "Earthlytics is a real-time climate intelligence dashboard that turns complex environmental data into clear, actionable insights. Track key indicators, estimate product footprints, and discover practical ways to reduce your impact.",
@@ -50,7 +52,8 @@ export default function ProjectsSection() {
       githubUrl: "https://github.com/yashk40/Earthlytics",
       liveUrl: "https://climate4.netlify.app/",
       image: "https://i.ibb.co/cKm12X7R/Screenshot-2025-09-24-155608.png",
-      color: "#6366F1",
+      color: "#22C55E",
+      certificateUrl: "https://imghosting.in/host/8fz2", // Add actual certificate link here
     },
     {
       title: "Chintamani Decor",
@@ -276,7 +279,7 @@ export default function ProjectsSection() {
     padding: "0.4rem 0.8rem",
     borderRadius: "0.5rem",
     fontSize: "0.75rem",
-    fontWeight: "600",
+    fontWeight: "700",
     backgroundColor: `${color}10`,
     color: color,
     border: `1px solid ${color}30`,
@@ -284,6 +287,8 @@ export default function ProjectsSection() {
     boxShadow: `0 0 15px ${color}15`,
     textTransform: "uppercase",
     letterSpacing: "0.05em",
+    position: "relative",
+    overflow: "hidden",
   })
 
   const projectDescriptionStyle = {
@@ -314,9 +319,12 @@ export default function ProjectsSection() {
 
   const buttonsContainerStyle = {
     display: "flex",
-    gap: "1rem",
-    flexDirection: isMobile ? "column" : "row",
-    flexWrap: isMobile ? "nowrap" : "nowrap",
+    gap: "0.75rem",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "center",
+    justifyContent: isMobile ? "center" : "flex-start",
+    width: "100%",
   }
 
   const githubButtonStyle = {
@@ -333,9 +341,10 @@ export default function ProjectsSection() {
     cursor: "pointer",
     border: "none",
     boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-    width: isMobile ? "90%" : "auto",
+    width: isMobile ? "100%" : "auto",
     justifyContent: "center",
     textDecoration: "none",
+    whiteSpace: "nowrap",
   }
 
   const liveButtonStyle = (color) => ({
@@ -351,10 +360,11 @@ export default function ProjectsSection() {
     cursor: "pointer",
     border: "none",
     boxShadow: "0 2px 4px rgba(0,0,0,0.2)",
-    width: isMobile ? "90%" : "auto",
+    width: isMobile ? "100%" : "auto",
     justifyContent: "center",
     textDecoration: "none",
     backgroundColor: color,
+    whiteSpace: "nowrap",
   })
 
   const discoverButtonStyle = {
@@ -467,13 +477,21 @@ export default function ProjectsSection() {
               >
                 {project.achievement && (
                   <motion.div
-                    style={achievementBadgeStyle(project.color)}
+                    className="premium-badge-container"
+                    style={{
+                      "--badge-color": project.color,
+                      "--badge-glow": `${project.color}40`,
+                      "--badge-bg": `${project.color}10`,
+                    }}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                   >
-                    <Trophy size={14} />
-                    <span>{project.achievement}</span>
+                    <div className="premium-badge-content">
+                      <div className="premium-badge-shimmer"></div>
+                      <Trophy size={14} color={project.color} />
+                      <span className="premium-badge-text">{project.achievement}</span>
+                    </div>
                   </motion.div>
                 )}
                 <h3 style={projectTitleStyle(project.color)}>{project.title}</h3>
@@ -489,7 +507,7 @@ export default function ProjectsSection() {
 
                 <div style={buttonsContainerStyle}>
                   {project.githubUrl && (
-                    <Magnet padding={20} disabled={false} magnetStrength={2}>
+                    <Magnet padding={20} disabled={false} magnetStrength={2} style={{ flex: isMobile ? "1 1 140px" : "0 0 auto", display: "flex", width: isMobile ? "100%" : "auto" }}>
                       <motion.a
                         href={project.githubUrl}
                         target="_blank"
@@ -504,7 +522,7 @@ export default function ProjectsSection() {
                     </Magnet>
                   )}
                   {project.liveUrl && (
-                    <Magnet padding={20} disabled={false} magnetStrength={2}>
+                    <Magnet padding={20} disabled={false} magnetStrength={2} style={{ flex: isMobile ? "1 1 140px" : "0 0 auto", display: "flex", width: isMobile ? "100%" : "auto" }}>
                       <motion.a
                         href={project.liveUrl}
                         target="_blank"
@@ -515,6 +533,25 @@ export default function ProjectsSection() {
                       >
                         <ExternalLink size={16} />
                         <span>Live Demo</span>
+                      </motion.a>
+                    </Magnet>
+                  )}
+                  {project.certificateUrl && (
+                    <Magnet padding={20} disabled={false} magnetStrength={2} style={{ flex: isMobile ? "1 1 140px" : "0 0 auto", display: "flex", width: isMobile ? "100%" : "auto" }}>
+                      <motion.a
+                        href={project.certificateUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          ...githubButtonStyle,
+                          border: `1px solid ${project.color}30`,
+                          width: "100%",
+                        }}
+                        whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Award size={16} color={project.color} />
+                        <span>See Certification</span>
                       </motion.a>
                     </Magnet>
                   )}

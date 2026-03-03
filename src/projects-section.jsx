@@ -80,6 +80,7 @@ export default function ProjectsSection() {
       image: "https://imghosting.in/host/jr0o",
       color: "#38BDF8",
     },
+    //update
     {
       title: "Mood-Book",
       description:

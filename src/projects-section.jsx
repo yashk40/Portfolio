@@ -36,11 +36,16 @@ export default function ProjectsSection() {
       description:
         "A cutting-edge AI-native CDN platform. Generate production-ready UI components via AI, watch them compile in real-time, and deploy instantly to a global GitHub-backed CDN. Built for the future of rapid deployment.",
       technologies: ["Next.js", "Tailwind CSS", "TypeScript", "Real-time Compiler", "GitHub API"],
-      // githubUrl: "https://github.com/yashk40/NeuraCDN",
+      githubUrl: "https://github.com/yashk40/Neuracdn.git",
       liveUrl: "https://www.neuracdn.tech/",
       image: "https://imghosting.in/host/q9xc",
       color: "#F59E0B",
-      certificateUrl: "https://imghosting.in/host/n9jd", // Add actual certificate link here
+      awards: [
+        { title: "State Level Participation", url: "/neura-cdn-state-cert.png" },
+        { title: "State Level Qualification", url: "/neura-cdn-participation-cert.jpeg" },
+        { title: "National Level Finalist", url: "https://imghosting.in/host/n9jd" },
+        { title: "Gen AI Workshop", url: "https://imgh.in/host/cu3ky3" },
+      ],
     },
     {
       title: "Earthlytics",
@@ -486,6 +491,51 @@ export default function ProjectsSection() {
                     </span>
                   ))}
                 </div>
+
+                {project.awards && project.awards.length > 0 && (
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem", marginBottom: isMobile ? "1.25rem" : "1.5rem" }}>
+                    {project.awards.map((award, i) => {
+                      const badgeStyle = {
+                        padding: "0.35rem 0.85rem",
+                        borderRadius: "9999px",
+                        fontSize: isMobile ? "0.7rem" : "0.8rem",
+                        fontWeight: 500,
+                        background: `${project.color}18`,
+                        color: project.color,
+                        border: `1px solid ${project.color}35`,
+                        letterSpacing: "0.03em",
+                        whiteSpace: "nowrap",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.35rem",
+                        cursor: award.url ? "pointer" : "default",
+                        textDecoration: "none",
+                        transition: "all 0.25s ease",
+                      }
+                      const content = (
+                        <>
+                          {award.title}
+                          {award.url && <ExternalLink size={12} style={{ opacity: 0.6 }} />}
+                        </>
+                      )
+                      return award.url ? (
+                        <a
+                          key={i}
+                          href={award.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={badgeStyle}
+                        >
+                          {content}
+                        </a>
+                      ) : (
+                        <span key={i} style={badgeStyle}>
+                          {content}
+                        </span>
+                      )
+                    })}
+                  </div>
+                )}
 
                 <div style={buttonsContainerStyle}>
                   {project.githubUrl && (

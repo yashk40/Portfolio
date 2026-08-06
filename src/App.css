@@ -994,3 +994,38 @@ a {
   letter-spacing: 0.1em;
   text-shadow: 0 0 8px var(--badge-glow, rgba(245, 158, 11, 0.4));
 }
+
+/* Certifications section */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: 1.25rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  text-decoration: none;
+  color: wheat;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.cert-item:hover {
+  color: #F9F0E1;
+}
+
+.cert-item-arrow {
+  color: rgba(245, 222, 179, 0.55);
+  min-width: 18px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.cert-item:hover .cert-item-arrow {
+  transform: translate(2px, -2px);
+  color: wheat;
+}

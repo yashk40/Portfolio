@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import './App.css'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ArrowUpRight } from 'lucide-react'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,6 +15,14 @@ export default function TopMid() {
   const desktopExpRef = useRef(null)
   const phoneCertRef = useRef(null)
   const desktopCertRef = useRef(null)
+
+  const certs = [
+    { title: "OpenAI Workshop Cert.", url: "https://openai-buildathon.nxtwave.tech/certificate?cid=SRZPYU4657" },
+    { title: "Silicon Hack Club Cert.", url: "https://drive.google.com/file/d/1EbJNo0203Ql5im4cCJ41fp80eK2cOFa1/view" },
+    { title: "Hack Forge 2025 Cert.", url: "https://drive.google.com/file/d/1agOPND5oh2YT2iEWD_KpSBrNYoVrmpwF/view" },
+    { title: "Syrotech Hack Cert.", url: "https://drive.google.com/file/d/1EF5ELims68s2RvRfSOZfE1AARuAFyEEu/view" },
+    { title: "Anthropic MCP Cert.", url: "https://verify.skilljar.com/c/seyqpi4yd4cu" },
+  ]
 
   useEffect(() => {
     // Create timeline for better control
@@ -148,7 +157,7 @@ export default function TopMid() {
 
           <div className='Top-Mid-Container-Text' ref={textRef1}>
 
-            As a Second-year undergraduate pursuing a BCA degree in Computer Science and Engineering, I`m currently freelancing while also on the lookout for full-time gigs and Internships.
+            As a Third-year undergraduate pursuing a BCA degree in Computer Science and Engineering, I`m currently freelancing while also on the lookout for full-time gigs and Internships.
 
           </div>
 
@@ -162,16 +171,24 @@ export default function TopMid() {
               <div className='comp-name-pos'>Web developer Intern</div>
               <a className='company-name' href='https://account.hktechnical.com/certification/create/aupdlkhgd/'>HK Technical <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
               <div className='company-date'>Jan 2025 - March 2025</div>
+
+              <div style={{ marginTop: "20px" }}>
+                <div className='comp-name-pos'>Software Developer Intern</div>
+                <div className='company-name'>Interact AI</div>
+                <div className='company-date'>Nov 2025 - March 2026</div>
+              </div>
             </div>
-            
+
             <div ref={phoneCertRef}>
               <div className='Exp-sec' style={{ marginTop: "20px", display: "block" }}>Certifications</div>
-              <a className='company-name' style={{ display: "block",backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500" , marginBottom:"5px" }} href='https://openai-buildathon.nxtwave.tech/certificate?cid=SRZPYU4657'>OpenAI Workshop Cert. <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-            <a className='company-name' style={{ display: "block" ,backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500",  marginBottom:"5px" }} href='https://drive.google.com/file/d/1EbJNo0203Ql5im4cCJ41fp80eK2cOFa1/view'>Silicon Hack Club Cert. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-            <a className='company-name' style={{ display: "block",backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500" ,  marginBottom:"5px" }} href='https://drive.google.com/file/d/1agOPND5oh2YT2iEWD_KpSBrNYoVrmpwF/view'>Hack Forge 2025 Cert. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-            <a className='company-name' style={{ display: "block" ,backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500" ,  marginBottom:"5px" }} href='https://drive.google.com/file/d/1EF5ELims68s2RvRfSOZfE1AARuAFyEEu/view'>Syrotech hack Cert. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-            <a className='company-name' style={{ display: "block",backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500" ,  marginBottom:"5px" ,}} href='https://verify.skilljar.com/c/seyqpi4yd4cu'>Anthropic MCP Cert. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-
+              <div className='cert-list'>
+                {certs.map((cert, i) => (
+                  <a key={i} className='cert-item' href={cert.url} target="_blank" rel="noopener noreferrer">
+                    {cert.title}
+                    <ArrowUpRight size={18} className='cert-item-arrow' />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -182,15 +199,24 @@ export default function TopMid() {
             <div className='comp-name-pos'>Web developer Intern</div>
             <a className='company-name' style={{ display: "flex" }} href='https://account.hktechnical.com/certification/create/aupdlkhgd/'>HK Technical <svg xmlns="http://www.w3.org/2000/svg" width="44" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
             <div className='company-date'>Jan 2025 - March 2025</div>
+
+            <div style={{ marginTop: "20px" }}>
+              <div className='comp-name-pos'>Software Developer Intern</div>
+              <div className='company-name'>Interact AI</div>
+              <div className='company-date'>Nov 2025 - March 2026</div>
+            </div>
           </div>
 
           <div ref={desktopCertRef} style={{marginTop:"80px",}}>
             <div className='Exp-sec' style={{ marginTop: "20px", display: "block" }}>Certifications</div>
-            <a className='company-name' style={{ display: "block",backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500" , marginBottom:"5px" }} href='https://openai-buildathon.nxtwave.tech/certificate?cid=SRZPYU4657'>OpenAI Workshop Cert. <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-            <a className='company-name' style={{ display: "block" ,backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500",  marginBottom:"5px" }} href='https://drive.google.com/file/d/1EbJNo0203Ql5im4cCJ41fp80eK2cOFa1/view'>Silicon Hack Club Cert. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-            <a className='company-name' style={{ display: "block",backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500" ,  marginBottom:"5px" }} href='https://drive.google.com/file/d/1agOPND5oh2YT2iEWD_KpSBrNYoVrmpwF/view'>Hack Forge 2025 Cert. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-            <a className='company-name' style={{ display: "block" ,backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500" ,  marginBottom:"5px" }} href='https://drive.google.com/file/d/1EF5ELims68s2RvRfSOZfE1AARuAFyEEu/view'>Syrotech hack Cert. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
-            <a className='company-name' style={{ display: "block",backgroundColor:"wheat" ,color:"black",width:"fit-content",borderRadius:"6px",padding:"5px",fontWeight:"500" ,  marginBottom:"5px" }} href='https://verify.skilljar.com/c/seyqpi4yd4cu'>Anthropic MCP Cert. <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></svg></a>
+            <div className='cert-list'>
+              {certs.map((cert, i) => (
+                <a key={i} className='cert-item' href={cert.url} target="_blank" rel="noopener noreferrer">
+                  {cert.title}
+                  <ArrowUpRight size={18} className='cert-item-arrow' />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 

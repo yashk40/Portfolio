@@ -11,7 +11,7 @@ export default function Navbar() {
                 <a href="https://github.com/yashk40"><img id="image-nav" src="Github.svg" alt="Github"/></a>
                 <a href="https://www.linkedin.com/in/yash-kum-658a252aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img id="image-nav" src="linkdin.svg" alt="LinkedIn"/></a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Ykumawat006@gmail.com" target="_blank" rel="noopener noreferrer"><img id="image-nav" src="Mail.svg" alt="Email"/></a>     
-                <a href="https://drive.google.com/file/d/1r8ZWLx9k1c7qAcbBAWDs_NRueqzaXhq-/view?usp=sharing"><img id="image-nav" src="Page.svg" alt="Resume"/></a>    
+                <a href="https://drive.google.com/file/d/1btXJWhNnHEEaJfQnwCxk3O_FTR8a7EJA/view"><img id="image-nav" src="Page.svg" alt="Resume"/></a>    
             </div>
             <div id='Navbar-Links-2'>
                 <a href='https://github.com/yashk40' id='github'>Github</a>

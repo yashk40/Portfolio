@@ -17,7 +17,7 @@ export default function TopMid() {
   const desktopCertRef = useRef(null)
 
   const certs = [
-    { title: "OpenAI Workshop Cert.", url: "https://openai-buildathon.nxtwave.tech/certificate?cid=SRZPYU4657" },
+    { title: "OpenAI Workshop Cert.", url: "https://imgh.in/host/cu3ky3" },
     { title: "Silicon Hack Club Cert.", url: "https://drive.google.com/file/d/1EbJNo0203Ql5im4cCJ41fp80eK2cOFa1/view" },
     { title: "Hack Forge 2025 Cert.", url: "https://drive.google.com/file/d/1agOPND5oh2YT2iEWD_KpSBrNYoVrmpwF/view" },
     { title: "Syrotech Hack Cert.", url: "https://drive.google.com/file/d/1EF5ELims68s2RvRfSOZfE1AARuAFyEEu/view" },

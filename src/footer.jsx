@@ -73,7 +73,7 @@ export default function Footer() {
               <span>Email</span>
             </a>
             <a
-              href="https://drive.google.com/file/d/1r8ZWLx9k1c7qAcbBAWDs_NRueqzaXhq-/view?usp=sharing"
+              href="https://drive.google.com/file/d/1btXJWhNnHEEaJfQnwCxk3O_FTR8a7EJA/view"
               className="footer-link"
               rel="noopener noreferrer"
             >
